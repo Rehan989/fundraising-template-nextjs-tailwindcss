@@ -5,6 +5,8 @@ import Hero from '../Components/Hero'
 
 import Card1 from '../Components/Cards/Card1'
 import Footer from '../Components/Footer'
+import Features1 from '../Components/Features/features1'
+import News1 from '../Components/Default/News1'
 
 export default function Home() {
   return (
@@ -40,7 +42,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className='mb-[100px]'>
+        <Features1 />
+      </div>
       <Footer />
+      <News1/>
     </div>
   )
 }
