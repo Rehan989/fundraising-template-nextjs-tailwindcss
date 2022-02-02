@@ -7,6 +7,7 @@ import Card1 from '../Components/Cards/Card1'
 import Footer from '../Components/Footer'
 import Features1 from '../Components/Features/features1'
 import News1 from '../Components/Default/News1'
+import Downloadus from '../Components/Features/Downloadus'
 
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
       </div>
       <div className='mb-[100px]'>
         <Features1 />
+      </div>
+      <div>
+        <Downloadus/>
       </div>
       <Footer />
       <News1/>
