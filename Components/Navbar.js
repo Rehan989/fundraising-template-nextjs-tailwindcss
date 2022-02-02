@@ -8,8 +8,6 @@ import {
     ChartBarIcon,
     CursorClickIcon,
     MenuIcon,
-    PhoneIcon,
-    PlayIcon,
     RefreshIcon,
     ShieldCheckIcon,
     SupportIcon,
@@ -19,7 +17,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import Fab from '@mui/material/Fab';
-import NavigationIcon from '@mui/icons-material/Navigation';
+import Signup from './Modals/Signup'
 import Signin from './Modals/Signin'
 
 const solutions = [
@@ -82,9 +80,13 @@ function classNames(...classes) {
 
 export default function Navbar() {
     const [LoginOpen, setLoginOpen] = useState(false);
+    const [SignupOpen, setSignupOpen] = useState(false);
 
     const openLoginModal = (newValue) =>{
         setLoginOpen(newValue)
+    }
+    const openSignupModal = (newValue) =>{
+        setSignupOpen(newValue)
     }
     return (
         <Popover className="relative bg-white">
@@ -199,14 +201,14 @@ export default function Navbar() {
                         <button type='button' onClick={()=>openLoginModal(true)} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                             Login&nbsp;/&nbsp;
                         </button>
-                        <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                        <button type='button' onClick={()=>openSignupModal(true)} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                             Register
-                        </a>
+                        </button>
                         <button type="button" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 mx-5">START A FUNDRAISER</button>
                     </div>
                 </div>
             </div>
-
+            {/* navbar for mobile */}
             <Transition
                 as={Fragment}
                 enter="duration-200 ease-out"
@@ -290,6 +292,7 @@ export default function Navbar() {
             </Transition>
             {/* Signin modal */}
             <Signin open={LoginOpen} setLoginOpen={setLoginOpen}/>
+            <Signup open={SignupOpen} setLoginOpen={setSignupOpen}/>
         </Popover>
     )
 }
