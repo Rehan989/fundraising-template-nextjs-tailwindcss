@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import {
@@ -20,6 +20,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
+import Signin from './Modals/Signin'
 
 const solutions = [
     {
@@ -80,6 +81,11 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const [LoginOpen, setLoginOpen] = useState(false);
+
+    const openLoginModal = (newValue) =>{
+        setLoginOpen(newValue)
+    }
     return (
         <Popover className="relative bg-white">
             <div className="max-w-8xl mx-auto px-4 sm:px-6">
@@ -190,9 +196,9 @@ export default function Navbar() {
                         </Link>
                     </Popover.Group>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                        <button type='button' onClick={()=>openLoginModal(true)} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                             Login&nbsp;/&nbsp;
-                        </a>
+                        </button>
                         <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                             Register
                         </a>
@@ -282,6 +288,8 @@ export default function Navbar() {
                     </div>
                 </Popover.Panel>
             </Transition>
+            {/* Signin modal */}
+            <Signin open={LoginOpen} setLoginOpen={setLoginOpen}/>
         </Popover>
     )
 }
