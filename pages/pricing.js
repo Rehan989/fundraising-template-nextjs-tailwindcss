@@ -6,7 +6,7 @@ import Footer from '../Components/Footer';
 const pricing = () => {
     return <div>
         <Navbar />
-        <div className="mt-6 my-[125px] grid grid-cols-3 mx-[120px] gap-10">
+        <div className="mt-6 my-[125px] grid grid-cols-3 md:grid-cols-1 sm:grid-cols-1 mx-[120px] gap-10">
             <div className='inline-block'>
                 <PricingMd />
             </div>
