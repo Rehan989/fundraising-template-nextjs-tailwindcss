@@ -5,7 +5,7 @@ const Footer = () => {
     return <div>
 
         <footer className="p-4 bg-white sm:p-6 dark:bg-gray-800">
-            <div className="md:flex md:justify-between">
+            <div className="md:flex md:justify-between mx-[8%]">
                 <div className="mb-6 md:mb-0">
                     <a href="#" target="_blank" className="flex items-center">
                         <Image src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA1MSA3MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGQ9Ik0xIDUzSDI3LjkwMjJDNDAuNjU4NyA1MyA1MSA0Mi43MDI1IDUxIDMwSDI0LjA5NzhDMTEuMzQxMiAzMCAxIDQwLjI5NzUgMSA1M1oiIGZpbGw9IiM3NkE5RkEiLz4KPHBhdGggZD0iTS0wLjg3NjU0NCAzMi4xNjQ0TC0wLjg3NjU0NCA2Ni40MTFDMTEuOTg0OSA2Ni40MTEgMjIuNDExMSA1NS45ODQ3IDIyLjQxMTEgNDMuMTIzM0wyMi40MTExIDguODc2NzRDMTAuMTE5NiA4Ljk4MDUxIDAuNTE4NzE0IDE5LjU1NzEgLTAuODc2NTQ0IDMyLjE2NDRaIiBmaWxsPSIjQTRDQUZFIi8+CjxwYXRoIGQ9Ik01MCA1SDIzLjA5NzhDMTAuMzQxMyA1IDAgMTUuMjk3NSAwIDI4SDI2LjkwMjJDMzkuNjU4OCAyOCA1MCAxNy43MDI1IDUwIDVaIiBmaWxsPSIjMUM2NEYyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNTEiIGhlaWdodD0iNzAiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==" className="mr-4 h-10" width={"45"} height={'45'} alt="FlowBite Logo" />

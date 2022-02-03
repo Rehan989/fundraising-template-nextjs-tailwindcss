@@ -193,7 +193,7 @@ export default function Navbar() {
                         <Link href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             About us
                         </Link>
-                        <Link href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <Link href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
                             Contact us
                         </Link>
                     </Popover.Group>
